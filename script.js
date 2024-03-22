@@ -44,49 +44,57 @@ const locations = [
     name: "town square",
     "button text": ["Go to store", "Go to cave", "Fight dragon"],
     "button functions": [goStore, goCave, fightDragon],
-    text: "You are in the town square. You see a sign that says \"Store\"."
+    text: "You are in the town square. You see a sign that says \"Store\".",
+    image: "assets/town-square.jpg"
   },
   {
     name: "store",
     "button text": ["Buy 10 health (10 gold)", "Buy weapon (30 gold)", "Go to town square"],
     "button functions": [buyHealth, buyWeapon, goTown],
-    text: "You enter the store."
+    text: "You enter the store.",
+    image: "assets/store.jpg"
   },
   {
     name: "cave",
     "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
     "button functions": [fightSlime, fightBeast, goTown],
-    text: "You enter the cave. You see some monsters."
+    text: "You enter the cave. You see some monsters.",
+    image: "assets/cave.jpg"
   },
   {
     name: "fight",
     "button text": ["Attack", "Dodge", "Run"],
     "button functions": [attack, dodge, goTown],
-    text: "You are fighting a monster."
+    text: "You are fighting a monster.",
+    image: "assets/fight.jpg"
   },
   {
     name: "kill monster",
     "button text": ["Go to town square", "Go to town square", "Go to town square"],
     "button functions": [goTown, goTown, easterEgg],
-    text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.'
+    text: 'The monster screams "Arg!" as it dies. You gain experience points and find gold.',
+    image: "assets/kill-monster.jpg"
   },
   {
     name: "lose",
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
-    text: "You die. &#x2620;"
+    text: "You die. &#x2620;",
+    image: "assets/lose.jpg"
   },
   {
     name: "win",
     "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
     "button functions": [restart, restart, restart],
-    text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;"
+    text: "You defeat the dragon! YOU WIN THE GAME! &#x1F389;",
+    image: "assets/win.jpg"
   },
   {
     name: "easter egg",
     "button text": ["2", "8", "Go to town square?"],
     "button functions": [pickTwo, pickEight, goTown],
-    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!"
+    text: "You find a secret game. Pick a number above. Ten numbers will be randomly chosen between 0 and 10. If the number you choose matches one of the random numbers, you win!",
+    image: "assets/easter-egg.jpg"
   }
 ];
 
@@ -104,6 +112,7 @@ function update(location) {
   button2.onclick = location["button functions"][1];
   button3.onclick = location["button functions"][2];
   text.innerHTML = location.text;
+  image.innerHTML = `<img src="${location.image}" alt="${location.name}">`;
 }
 
 function goTown() {

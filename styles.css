@@ -1,32 +1,51 @@
-body {
-  background-color: #0a0a23;
+html, body {
+  background-color: #000000;
+  height: 100%;
+  /* margin: 0 auto; */
+}
+
+#container {
+  background-image: url(assets/illumination-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  max-width: 1000px;
+  height: 100%;
 }
 
 #text {
-  background-color: #0a0a23;
+  background-color: #1b1012;
   color: #ffffff;
   padding: 10px;
 }
 
+#game img {
+  width: 480px;
+  margin: 0 auto;
+  display: block;
+}
+
 #game {
-  max-width: 500px;
-  max-height: 400px;
+  position: relative;
+  top: 30px;
+  width: 480px;
+  /* max-height: 400px; */
   background-color: #ffffff;
   color: #ffffff;
-  margin: 30px auto 0px;
+  margin: 0 auto;
   padding: 10px;
 }
 
 #controls,
 #stats {
-  border: 1px solid #0a0a23;
+  /* border: 1px solid #613312; */
   padding: 5px;
-  color: #0a0a23;
+  color: #1b1012;
 }
 
 #monsterStats {
   display: none;
-  border: 1px solid #0a0a23;
+  border: 1px solid #613312;
   padding: 5px;
   color: #ffffff;
   background-color: #c70d0d;
@@ -38,8 +57,10 @@ body {
 
 button {
   cursor: pointer;
-  color: #0a0a23;
-  background-color: #feac32;
-  background-image: linear-gradient(#fecc4c, #ffac33);
-  border: 3px solid #feac32;
+  color: #ffffff;
+  background-color: #613312;
+  background-image: linear-gradient(#7c613b, #6b4e24);
+  border: 3px solid #613312;
+  padding: 5px 10px;
+  font-weight: 600;
 }
